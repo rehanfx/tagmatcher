@@ -1,0 +1,22 @@
+{
+  "name": "Matcher",
+  "authors": [
+    "Rehan Ahmad <rehanahmad@hotmail.com>"
+  ],
+  "description": "A tag maching app",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "livestax"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

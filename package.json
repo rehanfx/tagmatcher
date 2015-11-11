@@ -1,0 +1,22 @@
+{
+  "name": "matcher",
+  "version": "0.0.1",
+  "description": "A tag matching app",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/rehanahmad/matcher.git"
+  },
+  "keywords": [
+    "webapp",
+    "spa",
+    "tag",
+    "match"
+  ],
+  "author": "Rehan Ahmad",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/rehanahmad/matcher#readme"
+}
