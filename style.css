@@ -1,0 +1,50 @@
+.btnInput {
+  width: 300px;
+  height: 100px;
+  font: 1.2em Arial;
+
+}
+#Photo {
+  /* Width and height of photo container */
+  min-height: 200px;
+  background: url("img/no-profile-m.jpg") no-repeat center/contain; 
+}
+.ProfilePage {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#ProfileOptions {
+  text-align: center;
+}
+#Info {
+  width: 70%;
+  text-align: left;
+  padding-top: 1.5em;
+}
+#Info strong {
+  /* Give it a width */
+  display: inline-block;
+  width: 8em;
+}
+#Info span {
+  /* Give it a width */
+  display: inline-block;
+  width: 21em;
+  margin-top: 1.4em;
+}
+.ProfileOptions {
+  width: 80%;
+  text-align: center;
+}
+.tagform {
+  width: 80%;
+  margin: auto;
+}
+.tags li {
+    display: inline-block;
+    background-color: lightblue;
+    padding: .2em;
+    border-radius: .3em;
+    margin: .1em .5em;
+}
