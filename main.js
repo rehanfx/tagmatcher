@@ -20,15 +20,25 @@ $(function () {
   $(".js-photo").on("click", function () { $(".js-imagefile").click(); });
   $(".js-imagefile").on("change", function($e) { readURL($e.currentTarget); });
   $("#tagenter").click(enterTag);
-  $("#taginput").change(enterTag);
   $("form").submit(function (e) {
+    e.preventDefault();
     $(".ProfilePage").hide(150);
     $(".MatchedProfile").show(150);
     getMatchedProfile();
-    e.preventDefault();
+    return false;
   });
   $(".MatchedProfile .js-again").click(resetForm);
   $(".MatchedProfile .js-like").click(likeMatch)
+//  $('form').on('keyup keypress', function(e) {
+//    var code = e.keyCode || e.which;
+//    if (code == 13) { 
+//      e.preventDefault();
+//      return false;
+//    }
+//  });  
+  
+  
+  
   //
   //  Page Helper functions
   //
@@ -107,7 +117,7 @@ $(function () {
         $(".MatchedProfile [name='gender']").text(d.gender);
         $(".MatchedProfile [name='location']").text(d.location);
 
-        setImageUrl($(".MatchedProfile .js-photo"), d.image+"?t=" + new Date().getTime()) ;
+        setImageUrl($(".MatchedProfile .photo"), d.image+"?t=" + new Date().getTime()) ;
 
 //      $(".MatchedProfile img").attr("src",d.image).show();
         var $ul = $('.MatchedProfile .tags ul')
