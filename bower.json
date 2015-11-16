@@ -18,5 +18,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "grunt-contrib-uglify": "~0.10.1"
+  }
 }

@@ -1,68 +1,106 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//assets.livestax.com/theme-0.0.1.css" media="all" rel="stylesheet" type="text/css">
+  <link href="style.css" rel="stylesheet">
   <title>Tag Match Service</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link href="//assets.livestax.com/theme-0.0.1.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 
 <body>
-
-  <section id="container" class="">
-    <div id="ProfilePage" class="ProfilePage">
-      <div class="row text-center">
-
-        <h1>Your Profile</h1>
-        <div class="col-sm-offset-2 col-sm-4 text-center">
-          <div id="Photo"></div>
+  <div class="container">
+    <header>
+      <h1>Tag Matcher Serice</h1>
+      <p>This app provides access to the Tag Matcher Service. It finds the matching profile to yours using the tags mentioned in your profile.</p>
+    </header>
+     <section class="ProfilePage">
+      <h2>Your Profile</h2>
+      <form class="tagform text-center">
+       <div class="row">
+       <div class="col-sm-6">
+        <div class="js-photo photo" name="picture">
+          <img alt="No profile image" src="img/no-profile-m.jpg">
         </div>
-
-        <div class="col-sm-4 text-center">
-          <div id="Info">
-            <p>
-              <strong>Name:</strong>
-              <span class="name">Rehan Ahmad</span>
-            </p>
-            <p>
-              <strong>Age:</strong>
-              <span class="age">49</span>
-            </p>
-            <p>
-              <strong>Gender:</strong>
-              <span class="gender">Male</span>
-            </p>
-            <p>
-              <strong>Location:</strong>
-              <span class="location">London, UK</span>
-            </p>
-          </div>
+        <input class="js-imagefile" style="display: none;" type="file">
         </div>
-      </div>
-      <div class="row text-center">
-        <h1>Your Personality</h1>
-        <div class="col-sm-12 text-center">
-          <form class="tagform">
-            <div class="form-group">
-              <label for="taginput">Enter your characteristic tags:</label>
-              <input type="text" class="form-control" id="taginput" placeholder="tall">
+        <div class="info col-sm-6">
+          <div>
+            <label class="control-label" for="name">Name:</label>
+            <div>
+              <input class="name" name="name" type="text">
             </div>
-          </form>
-          <div class="tags">
-            <ul>
-              <li>#tall</li>
-            </ul>
-            
           </div>
-
+          <div>
+            <label class="control-label" for="age">Age:</label>
+            <div><input class="age" name="age" type="text"></div>
+          </div>
+          <div>
+            <label class="control-label" for="gender">Gender:</label>
+            <div><input class="gender" name="gender" type="text"></div>
+          </div>
+          <div>
+            <label class="control-label" for="location">Location:</label>
+            <div><input class="location" name="location" type="text"></div>
+          </div>
         </div>
+        </div>
+        <h2>Your Personality</h2>
+        <div class="form-group">
+          <label for="taginput">Enter your characteristic tags:</label>
+          <div class="form-inline">
+            <input autofocus="" class="form-control" id="taginput" placeholder="tall" type="text">
+            <button class="btn btn-primary" id="tagenter" type="button">Enter</button>
+          </div>
+        </div>
+        <div class="tags" name="tags">
+          <ul></ul>
+        </div>
+        <button class="form-control btn btn-primary" type="submit">Send</button>
+      </form>
+    </section>
+     <section class="MatchedProfile" style="display:none">
+       <h2>Matched Profile</h2>
+       <div class="text-center">
+       <div class="row">
+       <div class="col-sm-6">
+        <div class="js-photo photo">
+          <img alt="No profile image" src="img/no-profile-m.jpg">
+        </div>
+        </div>
+        <div class="info col-sm-6">
+          <div >
+            <label class="control-label">Name:</label>
+            <div>
+              <div class="name" name="name">Matched Name</div>
+            </div>
+          </div>
+          <div>
+            <label class="control-label" for="age">Age:</label>
+            <div><div class="age" name="age" >matched age</div></div>
+          </div>
+          <div>
+            <label class="control-label" for="gender">Gender:</label>
+            <div><div class="gender" name="gender" >Matched gender</div></div>
+          </div>
+          <div>
+            <label class="control-label" for="location">Location:</label>
+            <div><div class="location" name="location">matched location</div></div>
+          </div>
+        </div>
+        </div>
+        <h2>Matched Personality</h2>
+        <div class="tags" name="tags">
+          <ul></ul>
+        </div>
+      <button type="button" class="btn btn-default js-again">Again</button>
+      <button type="button" class="btn btn-primary js-like">I Like it</button>
       </div>
 
-    </div>
-    </div>
-  </section>
+    </section>
+
+  </div>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="//assets.livestax.com/livestax-0.2.0.min.js"></script>
